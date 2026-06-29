@@ -19,11 +19,11 @@
   <link rel="stylesheet" href="/alps-tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=optional" onload="this.onload=null;this.rel='stylesheet'" />
-  <link data-icons-font rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=airplane_ticket,alt_route,calendar_today,directions_car,flight,flight_takeoff,location_on,mountain_flag,train,verified&display=optional" onload="this.onload=null;this.rel='stylesheet'" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Caveat:wght@600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=optional" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=airplane_ticket,alt_route,calendar_today,directions_car,flight,flight_takeoff,location_on,mountain_flag,train,verified&display=optional" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Caveat:wght@600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   </noscript>
   <style>
     :root {
@@ -40,46 +40,11 @@
       margin: 0; padding: 0;
       height: 100%;
       overflow: hidden;
-      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Noto Sans SC', sans-serif;
       background-color: var(--ink);
       color: var(--ink);
     }
     .serif { font-family: 'Playfair Display', serif; }
-    .material-symbols-outlined {
-      --icon-size: 1.35rem;
-      display: inline-flex;
-      width: var(--icon-size);
-      height: var(--icon-size);
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      font-size: 0 !important;
-      line-height: 1;
-      vertical-align: -0.18em;
-      flex: 0 0 var(--icon-size);
-    }
-    .material-symbols-outlined::before {
-      content: attr(data-symbol);
-      display: block;
-      font-family: ui-serif, Georgia, serif;
-      font-size: var(--icon-size);
-      font-weight: 700;
-      line-height: 1;
-    }
-    .material-symbols-outlined.text-3xl { --icon-size: 1.875rem; }
-    .material-symbols-outlined[style*="font-size:380px"] { --icon-size: 380px; }
-    body.icons-ready .material-symbols-outlined {
-      font-family: 'Material Symbols Outlined';
-      font-size: var(--icon-size) !important;
-      font-weight: normal;
-      font-style: normal;
-      letter-spacing: normal;
-      text-transform: none;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-    }
-    body.icons-ready .material-symbols-outlined::before { content: none; }
 
     /* ---------- Fullpage engine ---------- */
     #deck {
@@ -294,7 +259,7 @@
   <!-- Top bar -->
   <div id="topbar">
     <div class="brand flex items-center gap-2">
-      <span class="brand-icon material-symbols-outlined" data-symbol="△" aria-hidden="true">mountain_flag</span>
+      <span class="brand-icon material-symbols-outlined">mountain_flag</span>
       <span class="font-bold tracking-tighter text-lg">ALPS PEAK 15</span>
     </div>
     <div id="counter" class="text-sm font-bold tracking-widest serif">01 <span>/ 24</span></div>
@@ -323,9 +288,9 @@
         </h1>
         <p class="reveal d3 text-white/80 max-w-2xl text-lg md:text-xl font-light leading-relaxed mb-10">穿越欧洲屋脊的 15 天朝圣：从霞慕尼的万年冰川，到多洛米蒂的锯齿红岩，再到马特洪峰的完美倒影与少女峰下的田园。</p>
         <div class="reveal d4 flex flex-wrap gap-6 text-white text-sm font-bold tracking-widest uppercase">
-          <div class="flex items-center gap-2"><span class="material-symbols-outlined" data-symbol="□" aria-hidden="true" style="color:var(--gold)">calendar_today</span> 15 DAYS</div>
-          <div class="flex items-center gap-2"><span class="material-symbols-outlined" data-symbol="●" aria-hidden="true" style="color:var(--gold)">location_on</span> 3 COUNTRIES</div>
-          <div class="flex items-center gap-2"><span class="material-symbols-outlined" data-symbol="✈" aria-hidden="true" style="color:var(--gold)">flight_takeoff</span> FROM SZX/CAN/HKG</div>
+          <div class="flex items-center gap-2"><span class="material-symbols-outlined" style="color:var(--gold)">calendar_today</span> 15 DAYS</div>
+          <div class="flex items-center gap-2"><span class="material-symbols-outlined" style="color:var(--gold)">location_on</span> 3 COUNTRIES</div>
+          <div class="flex items-center gap-2"><span class="material-symbols-outlined" style="color:var(--gold)">flight_takeoff</span> FROM SZX/CAN/HKG</div>
         </div>
       </div>
     </section>
@@ -339,11 +304,11 @@
           <p class="reveal d2 text-sm md:text-lg leading-relaxed md:leading-loose mb-4 md:mb-8 italic" style="color:var(--muted)">"阿尔卑斯不是一组地理名词，而是一种生活方式。是在清晨 3842 米的寒风中看第一缕阳光照亮南针峰，是在多洛米蒂蜿蜒的山口公路上感受自由。"</p>
           <div class="space-y-3 md:space-y-6">
             <div class="reveal d3 flex gap-4">
-              <span class="material-symbols-outlined text-3xl" data-symbol="✓" aria-hidden="true" style="color:var(--gold)">verified</span>
+              <span class="material-symbols-outlined text-3xl" style="color:var(--gold)">verified</span>
               <div><h4 class="font-bold" style="color:var(--ink)">地理级视觉盛宴</h4><p class="text-sm" style="color:var(--muted)">严格筛选全球最美观景位，绝非走马观花。</p></div>
             </div>
             <div class="reveal d4 flex gap-4">
-              <span class="material-symbols-outlined text-3xl" data-symbol="▰" aria-hidden="true" style="color:var(--gold)">directions_car</span>
+              <span class="material-symbols-outlined text-3xl" style="color:var(--gold)">directions_car</span>
               <div><h4 class="font-bold" style="color:var(--ink)">无缝转场体验</h4><p class="text-sm" style="color:var(--muted)">结合自驾自由度与瑞士铁路的精准。</p></div>
             </div>
           </div>
@@ -357,13 +322,13 @@
 
     <!-- Panel 3: LOGISTICS -->
     <section class="panel" data-label="大交通" style="background:var(--forest)">
-      <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none text-white"><span class="material-symbols-outlined" data-symbol="✈" aria-hidden="true" style="font-size:380px">flight</span></div>
+      <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none text-white"><span class="material-symbols-outlined" style="font-size:380px">flight</span></div>
       <div class="relative w-full max-w-6xl mx-auto px-8 text-white">
         <div class="reveal d1 text-xs font-bold tracking-widest uppercase mb-3" style="color:var(--gold)">Getting There & Around</div>
         <h2 class="reveal d1 serif text-4xl md:text-5xl mb-8 md:mb-12">大交通规划</h2>
         <div class="hscroll reveal d2" style="--cols:3">
           <div class="hcard glass p-7 md:p-8 rounded-3xl">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" data-symbol="▣" aria-hidden="true" style="color:var(--gold)">airplane_ticket</span></div>
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" style="color:var(--gold)">airplane_ticket</span></div>
             <h3 class="text-xl font-bold mb-4">机票方案</h3>
             <ul class="text-sm text-white/70 space-y-3">
               <li><strong class="text-white">去程：</strong>深圳 SZX 直飞米兰 MXP（海航）；或广州 CAN / 香港 HKG 经法兰克福 / 多哈中转抵达日内瓦 GVA。</li>
@@ -371,7 +336,7 @@
             </ul>
           </div>
           <div class="hcard glass p-7 md:p-8 rounded-3xl">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" data-symbol="↬" aria-hidden="true" style="color:var(--gold)">alt_route</span></div>
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" style="color:var(--gold)">alt_route</span></div>
             <h3 class="text-xl font-bold mb-4">城际衔接</h3>
             <ul class="text-sm text-white/70 space-y-3">
               <li><strong class="text-white">法→意：</strong>穿越 11.6km 勃朗峰隧道，自驾最高效。</li>
@@ -379,7 +344,7 @@
             </ul>
           </div>
           <div class="hcard glass p-7 md:p-8 rounded-3xl">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" data-symbol="▤" aria-hidden="true" style="color:var(--gold)">train</span></div>
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" style="color:var(--gold)">train</span></div>
             <h3 class="text-xl font-bold mb-4">区域通行</h3>
             <ul class="text-sm text-white/70 space-y-3">
               <li><strong class="text-white">瑞士旅行通票：</strong>覆盖采尔马特至格林德瓦全线火车。</li>
@@ -1199,19 +1164,6 @@
 
     document.body.classList.add('js-ready');
     render();
-
-    const iconFontLink = document.querySelector('[data-icons-font]');
-    function enableMaterialIcons() {
-      const canCheck = document.fonts && typeof document.fonts.check === 'function';
-      if (!canCheck || document.fonts.check('24px "Material Symbols Outlined"', 'flight')) {
-        document.body.classList.add('icons-ready');
-      }
-    }
-    if (iconFontLink) iconFontLink.addEventListener('load', () => requestAnimationFrame(enableMaterialIcons), { once: true });
-    window.addEventListener('load', () => {
-      enableMaterialIcons();
-      setTimeout(enableMaterialIcons, 800);
-    }, { once: true });
   </script>
 </body>
 </html>
