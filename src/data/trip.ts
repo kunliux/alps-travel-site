@@ -54,7 +54,7 @@ export const siteMeta = {
   shortTitle: "ALPS PEAK 15",
   description:
     "从霞慕尼、勃朗峰、多洛米蒂到策马特、马特洪峰和少女峰的 15 天法意瑞阿尔卑斯旅行路线，覆盖交通、每日行程、住宿与执行建议。",
-  url: "https://alps-travel-site.pages.dev",
+  url: "https://alps-peak-15.pages.dev",
   image: "/alps_assets/mont_blanc.webp"
 };
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alps-travel-site.pages.dev/sitemap-index.xml
+Sitemap: https://alps-peak-15.pages.dev/sitemap-index.xml
