@@ -3,7 +3,7 @@
 Astro + TypeScript 静态站点，用于展示「法意瑞阿尔卑斯 15 天巅峰之旅」路线、每日行程、交通规划和住宿建议。目标部署平台是 Cloudflare Pages，最终地址：
 
 ```text
-https://alps-travel-site.pages.dev
+https://alps.pages.dev
 ```
 
 ## 本地启动
@@ -27,14 +27,14 @@ npm run preview
 最近一次本地校验：
 
 - `npm run build`：通过，Astro check 0 errors / 0 warnings
-- Lighthouse：Performance 94 / Accessibility 93 / Best Practices 100 / SEO 100
+- Lighthouse：发布到 Cloudflare Pages 后复测
 
 ## 目录结构
 
 ```text
 src/
   pages/           Astro 路由页面
-  templates/       与 gf-preview 对齐的首页 HTML 模板
+  templates/       首页 HTML 模板
   components/      后续组件化扩展预留
   layouts/         后续页面布局预留
   data/            后续结构化内容扩展预留
@@ -45,7 +45,7 @@ public/
 
 ## 如何更新网站内容
 
-当前首页以内部门户预览稿为视觉基准，源码来自 `alps_travel_site_latest.zip`。
+当前首页以确认过的视觉稿为基准，源码来自 `alps_travel_site_latest.zip`。
 
 - 修改首页内容：编辑 `src/templates/alps-preview.html`
 - 更新素材：替换 `public/alps_assets/` 下的同名文件
@@ -72,7 +72,7 @@ Cloudflare Pages 项目建议配置：
 
 | 配置项 | 值 |
 | --- | --- |
-| Project name | `alps-travel-site` |
+| Project name | `alps` |
 | Production branch | `master` |
 | Framework preset | `Astro` |
 | Build command | `npm run build` |
@@ -83,7 +83,7 @@ Cloudflare Pages 项目建议配置：
 仓库内也包含 `wrangler.toml`：
 
 ```toml
-name = "alps-travel-site"
+name = "alps"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-06-29"
 ```
@@ -96,6 +96,6 @@ compatibility_date = "2026-06-29"
 2. 选择 `Connect to Git`。
 3. 授权并选择 GitHub 仓库 `alps-travel-site`。
 4. 使用上方构建配置。
-5. 保存后，每次 push 到 `master` 都会自动构建并发布到 `https://alps-travel-site.pages.dev`。
+5. 保存后，每次 push 到 `master` 都会自动构建并发布到 `https://alps.pages.dev`。
 
 Cloudflare 官方 Git integration 文档说明：连接 GitHub/GitLab 后，每次 push 到分支都会自动构建和部署。不要优先创建 Direct Upload 项目；Cloudflare 文档明确提示 Direct Upload 项目之后不能切换到 Git integration。
