@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+import { siteMeta } from "@data/trip";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const title = Astro.props.title ?? siteMeta.title;
+const description = Astro.props.description ?? siteMeta.description;
+const canonicalUrl = new URL(Astro.url.pathname, siteMeta.url).toString();
+const imageUrl = new URL(Astro.props.image ?? siteMeta.image, siteMeta.url).toString();
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  name: siteMeta.title,
+  url: siteMeta.url,
+  description,
+  areaServed: ["France", "Italy", "Switzerland"],
+  image: imageUrl
+};
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content={siteMeta.shortTitle} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="theme-color" content="#f7f2e8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#10241d" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="/alps_assets/mont_blanc.webp" type="image/webp" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+import type { TripDay } from "@data/trip";
+
+interface Props {
+  day: TripDay;
+}
+
+const { day } = Astro.props;
+---
+
+<article class="day-card">
+  <div class="day-card-head">
+    <span class="day-number">{day.day}</span>
+    <div>
+      <p>{day.phase}</p>
+      <h3>{day.title}</h3>
+    </div>
+  </div>
+  <p class="day-highlight">{day.highlight}</p>
+  <ol class="day-timeline">
+    {
+      day.moments.map((moment) => (
+        <li>
+          <span>{moment.period}</span>
+          <strong>{moment.title}</strong>
+          <p>{moment.detail}</p>
+        </li>
+      ))
+    }
+  </ol>
+  <div class="day-meta">
+    <p><strong>基地</strong>{day.base}</p>
+    <p><strong>Tips</strong>{day.tip}</p>
+  </div>
+</article>

@@ -1,0 +1,39 @@
+---
+import type { StayCard } from "@data/trip";
+import SectionHeading from "./SectionHeading.astro";
+
+interface Props {
+  stays: StayCard[];
+}
+
+const { stays } = Astro.props;
+---
+
+<section class="band stays" id="stays" aria-labelledby="stays-title">
+  <div class="page-shell">
+    <SectionHeading
+      eyebrow="Where to Stay"
+      title="宿在阿尔卑斯"
+      description="每个基地保留豪华景观与高性价比两档，便于按预算快速替换。"
+    />
+    <div class="stay-grid">
+      {
+        stays.map((stay) => (
+          <article class="info-card stay-card" style={`--accent:${stay.accent}`}>
+            <h3>{stay.region}</h3>
+            <div>
+              <p class="card-label">豪华景观</p>
+              <strong>{stay.luxury.name}</strong>
+              <span>{stay.luxury.note}</span>
+            </div>
+            <div>
+              <p class="card-label">高性价比</p>
+              <strong>{stay.value.name}</strong>
+              <span>{stay.value.note}</span>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

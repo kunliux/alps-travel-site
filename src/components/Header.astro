@@ -1,0 +1,19 @@
+---
+import { regions, siteMeta } from "@data/trip";
+---
+
+<header class="site-header" aria-label="站点导航">
+  <a class="brand" href="#top" aria-label="回到首页顶部">
+    <span class="brand-mark" aria-hidden="true">AP</span>
+    <span>{siteMeta.shortTitle}</span>
+  </a>
+  <nav class="primary-nav" aria-label="主要导航">
+    <a href="#route">路线</a>
+    <a href="#itinerary">行程</a>
+    <a href="#stays">住宿</a>
+    <a href="#deploy-notes">更新</a>
+  </nav>
+  <nav class="region-nav" aria-label="区域快速跳转">
+    {regions.map((region) => <a href={`#${region.anchor}`}>{region.range}</a>)}
+  </nav>
+</header>

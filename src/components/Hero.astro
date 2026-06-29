@@ -1,0 +1,46 @@
+---
+import type { tripStats } from "@data/trip";
+
+interface Props {
+  stats: typeof tripStats;
+}
+
+const { stats } = Astro.props;
+---
+
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <picture class="hero-media">
+    <source srcset="/alps_assets/mont_blanc_p.webp" media="(max-width: 720px)" type="image/webp" />
+    <img
+      src="/alps_assets/mont_blanc.webp"
+      alt="勃朗峰群山与雪线，作为法意瑞阿尔卑斯 15 天路线的开场背景"
+      width="1920"
+      height="1072"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </picture>
+  <div class="hero-overlay"></div>
+  <div class="hero-content page-shell">
+    <p class="eyebrow">Epic Grand Tour</p>
+    <h1 id="hero-title">法意瑞阿尔卑斯 15 天巅峰之旅</h1>
+    <p class="hero-copy">
+      从霞慕尼的万年冰川，到多洛米蒂的红岩山口，再到马特洪峰倒影与少女峰云端铁路，一条把高山风景和执行细节都串好的欧洲屋脊路线。
+    </p>
+    <div class="hero-actions">
+      <a class="button primary" href="#itinerary">查看 15 天行程</a>
+      <a class="button ghost" href="#route">路线总览</a>
+    </div>
+    <dl class="hero-stats" aria-label="旅程摘要">
+      {
+        stats.map((stat) => (
+          <div>
+            <dt>{stat.value}</dt>
+            <dd>{stat.label}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>

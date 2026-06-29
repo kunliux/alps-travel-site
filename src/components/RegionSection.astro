@@ -1,0 +1,39 @@
+---
+import type { Region, TripDay } from "@data/trip";
+import DayCard from "./DayCard.astro";
+
+interface Props {
+  region: Region;
+  days: TripDay[];
+}
+
+const { region, days } = Astro.props;
+---
+
+<section class="region-section" id={region.anchor} style={`--accent:${region.accent}`}>
+  <div class="region-hero">
+    <picture>
+      <source srcset={region.portrait} media="(max-width: 720px)" type="image/webp" />
+      <img
+        src={region.landscape}
+        alt={`${region.title}区域风景`}
+        width="1920"
+        height="1072"
+        loading="lazy"
+        decoding="async"
+      />
+    </picture>
+    <div class="region-copy page-shell">
+      <p class="eyebrow">{region.eyebrow}</p>
+      <span class="region-range">{region.range}</span>
+      <h2>{region.title}</h2>
+      <p>{region.summary}</p>
+      <ul class="tag-list" aria-label={`${region.title}亮点`}>
+        {region.tags.map((tag) => <li>{tag}</li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="page-shell day-grid">
+    {days.map((day) => <DayCard day={day} />)}
+  </div>
+</section>

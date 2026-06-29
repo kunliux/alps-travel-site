@@ -1,0 +1,48 @@
+---
+import { regions } from "@data/trip";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<section class="band" aria-labelledby="overview-title">
+  <div class="page-shell two-col">
+    <div>
+      <SectionHeading
+        eyebrow="Route Philosophy"
+        title="用四个基地压住 15 天节奏"
+        description="这条路线不是追求打卡数量，而是用足够停留时间换取好天气窗口、体力恢复和高山观景成功率。"
+      />
+      <div class="principles">
+        <article>
+          <h3>地理级视觉盛宴</h3>
+          <p>优先筛选全球高辨识度山景：勃朗峰、三尖峰、马特洪峰、少女峰。</p>
+        </article>
+        <article>
+          <h3>转场少而清晰</h3>
+          <p>法国和意大利自驾，瑞士段交给铁路，让复杂度停在可控范围。</p>
+        </article>
+      </div>
+    </div>
+    <figure class="map-panel">
+      <img
+        src="/alps_assets/route_map_transparent.webp"
+        alt="法意瑞阿尔卑斯路线图，连接霞慕尼、多洛米蒂、策马特与格林德瓦"
+        width="1800"
+        height="764"
+        loading="lazy"
+        decoding="async"
+      />
+      <figcaption>Chamonix → Dolomites → Zermatt → Grindelwald</figcaption>
+    </figure>
+  </div>
+  <div class="page-shell route-grid" aria-label="四个路线阶段">
+    {
+      regions.map((region) => (
+        <a class="route-stage" href={`#${region.anchor}`} style={`--accent:${region.accent}`}>
+          <span>{region.range}</span>
+          <strong>{region.title}</strong>
+          <small>{region.eyebrow}</small>
+        </a>
+      ))
+    }
+  </div>
+</section>

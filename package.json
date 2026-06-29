@@ -1,0 +1,23 @@
+{
+  "name": "alps-travel-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/alps-tailwind.css --minify",
+    "dev": "npm run build:css && astro dev",
+    "start": "npm run dev",
+    "build": "npm run build:css && astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "latest",
+    "astro": "latest"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest"
+  }
+}

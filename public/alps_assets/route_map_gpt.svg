@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="rmTitle rmDesc" font-family="'Caveat','Ma Shan Zheng','Noto Sans SC',cursive,serif">
+  <title id="rmTitle">法意瑞阿尔卑斯 15 天巅峰之旅路线图</title>
+  <desc id="rmDesc">旅行手账风手绘路线图：霞慕尼 CHAMONIX → 多洛米蒂 DOLOMITES → 采尔马特 ZERMATT → 格林德瓦 GRINDELWALD。</desc>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Ma+Shan+Zheng&amp;display=swap');
+    .rm-ink   { fill:none; stroke:#5C3D2E; stroke-linecap:round; stroke-linejoin:round; }
+    .rm-peak  { stroke-width:1.6; }
+    .rm-ridge { stroke-width:1.1; opacity:.85; }
+    .rm-hatch { stroke-width:0.9; opacity:.55; }
+    .rm-route { fill:none; stroke:#C9A96E; stroke-width:2.4; stroke-linecap:round; stroke-dasharray:9 7; }
+    .rm-arrow { fill:none; stroke:#C9A96E; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
+    .rm-dot   { fill:#C9A96E; }
+    .rm-num   { fill:#C9A96E; font-family:'Caveat',cursive; font-size:30px; font-weight:700; }
+    .rm-cn    { fill:#5C3D2E; font-family:'Ma Shan Zheng','Noto Sans SC',serif; font-size:21px; text-anchor:middle; }
+    .rm-en    { fill:#5C3D2E; font-family:'Caveat',cursive; font-size:15px; font-weight:600; letter-spacing:1.5px; text-anchor:middle; }
+  </style>
+
+  <!-- ================= ROUTE (drawn first, sits behind nodes; routed to clear all labels) ================= -->
+  <path class="rm-route" d="M 118,222 C 175,205 250,120 318,116 C 400,118 470,215 520,222 C 590,210 640,120 700,116"/>
+  <!-- V chevron arrowheads along the path, pointing in travel direction -->
+  <g class="rm-arrow">
+    <path d="M 210,159 L 219,159 L 219,168"/>
+    <path d="M 428,173 L 437,173 L 437,164"/>
+    <path d="M 610,161 L 619,161 L 619,170"/>
+  </g>
+
+  <!-- ================= 1 · CHAMONIX  (rolling snowy range, lower-left) ================= -->
+  <g>
+    <path class="rm-ink rm-peak" d="M 54,218 L 78,176 L 92,195 L 110,148 L 131,191 L 147,170 L 170,218"/>
+    <path class="rm-ink rm-ridge" d="M 110,150 L 116,172 L 108,186"/>
+    <path class="rm-ink rm-ridge" d="M 78,178 L 84,192"/>
+    <g class="rm-ink rm-hatch">
+      <path d="M 114,164 L 124,176"/>
+      <path d="M 118,172 L 127,183"/>
+      <path d="M 122,180 L 130,190"/>
+      <path d="M 132,182 L 140,192"/>
+      <path d="M 84,196 L 91,205"/>
+      <path d="M 89,200 L 96,209"/>
+    </g>
+  </g>
+  <circle class="rm-dot" cx="118" cy="228" r="4.6"/>
+  <text class="rm-num" x="86" y="236">1</text>
+  <text class="rm-cn" x="118" y="262">霞慕尼</text>
+  <text class="rm-en" x="118" y="280">CHAMONIX</text>
+
+  <!-- ================= 2 · DOLOMITES (vertical jagged spires, upper) ================= -->
+  <g>
+    <path class="rm-ink rm-peak" d="M 266,106 L 279,66 L 286,88 L 297,46 L 306,84 L 318,40 L 328,82 L 340,54 L 350,86 L 362,64 L 374,106"/>
+    <path class="rm-ink rm-ridge" d="M 318,42 L 322,70"/>
+    <path class="rm-ink rm-ridge" d="M 297,48 L 300,72"/>
+    <g class="rm-ink rm-hatch">
+      <path d="M 320,56 L 328,68"/>
+      <path d="M 322,64 L 330,76"/>
+      <path d="M 300,60 L 307,71"/>
+      <path d="M 342,66 L 349,77"/>
+    </g>
+  </g>
+  <circle class="rm-dot" cx="318" cy="116" r="4.6"/>
+  <text class="rm-num" x="286" y="124">2</text>
+  <text class="rm-cn" x="318" y="150">多洛米蒂</text>
+  <text class="rm-en" x="318" y="168">DOLOMITES</text>
+
+  <!-- ================= 3 · ZERMATT (Matterhorn hooked triangle, lower) ================= -->
+  <g>
+    <path class="rm-ink rm-peak" d="M 470,222 L 512,150 L 521,140 L 514,132 L 529,150 L 572,222"/>
+    <path class="rm-ink rm-ridge" d="M 518,142 L 510,170 L 520,196"/>
+    <g class="rm-ink rm-hatch">
+      <path d="M 522,160 L 534,176"/>
+      <path d="M 524,172 L 538,189"/>
+      <path d="M 527,186 L 542,202"/>
+      <path d="M 530,198 L 545,213"/>
+    </g>
+  </g>
+  <circle class="rm-dot" cx="520" cy="228" r="4.6"/>
+  <text class="rm-num" x="488" y="236">3</text>
+  <text class="rm-cn" x="520" y="262">采尔马特</text>
+  <text class="rm-en" x="520" y="280">ZERMATT</text>
+
+  <!-- ================= 4 · GRINDELWALD (broad Jungfrau massif, upper-right) ================= -->
+  <g>
+    <path class="rm-ink rm-peak" d="M 638,106 L 666,66 L 685,82 L 700,48 L 717,78 L 736,62 L 762,106"/>
+    <path class="rm-ink rm-ridge" d="M 700,50 L 706,76 L 698,92"/>
+    <path class="rm-ink rm-ridge" d="M 666,68 L 672,86"/>
+    <g class="rm-ink rm-hatch">
+      <path d="M 704,64 L 714,76"/>
+      <path d="M 708,72 L 717,83"/>
+      <path d="M 712,80 L 720,90"/>
+      <path d="M 672,80 L 680,90"/>
+    </g>
+  </g>
+  <circle class="rm-dot" cx="700" cy="116" r="4.6"/>
+  <text class="rm-num" x="668" y="124">4</text>
+  <text class="rm-cn" x="700" y="150">格林德瓦</text>
+  <text class="rm-en" x="700" y="168">GRINDELWALD</text>
+</svg>

@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALPS PEAK 15</title>
+  <meta name="description" content="法意瑞阿尔卑斯 15 天巅峰之旅：霞慕尼、勃朗峰、多洛米蒂、采尔马特、马特洪峰与少女峰旅行路线。" />
+  <link rel="canonical" href="https://alps-travel-site.pages.dev/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="ALPS PEAK 15" />
+  <meta property="og:description" content="法意瑞阿尔卑斯 15 天巅峰之旅：从霞慕尼到多洛米蒂、采尔马特与少女峰。" />
+  <meta property="og:image" content="https://alps-travel-site.pages.dev/alps_assets/mont_blanc.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" href="alps_assets/mont_blanc_p.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="alps_assets/mont_blanc.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high" />
+  <link rel="stylesheet" href="/alps-tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=optional" onload="this.onload=null;this.rel='stylesheet'" />
+  <link data-icons-font rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=airplane_ticket,alt_route,calendar_today,directions_car,flight,flight_takeoff,location_on,mountain_flag,train,verified&display=optional" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=optional" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=airplane_ticket,alt_route,calendar_today,directions_car,flight,flight_takeoff,location_on,mountain_flag,train,verified&display=optional" rel="stylesheet" />
+  </noscript>
+  <style>
+    :root {
+      --ink: #0c1210;
+      --muted: #5c6b65;
+      --paper: #f9f7f2;
+      --gold: #c5a059;
+      --forest: #1a362d;
+      --accent: #d44d2e;
+      --gold-dark: #8a6d2f;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--ink);
+      color: var(--ink);
+    }
+    .serif { font-family: 'Playfair Display', serif; }
+    .material-symbols-outlined {
+      --icon-size: 1.35rem;
+      display: inline-flex;
+      width: var(--icon-size);
+      height: var(--icon-size);
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-size: 0 !important;
+      line-height: 1;
+      vertical-align: -0.18em;
+      flex: 0 0 var(--icon-size);
+    }
+    .material-symbols-outlined::before {
+      content: attr(data-symbol);
+      display: block;
+      font-family: ui-serif, Georgia, serif;
+      font-size: var(--icon-size);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .material-symbols-outlined.text-3xl { --icon-size: 1.875rem; }
+    .material-symbols-outlined[style*="font-size:380px"] { --icon-size: 380px; }
+    body.icons-ready .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-size: var(--icon-size) !important;
+      font-weight: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-transform: none;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+    }
+    body.icons-ready .material-symbols-outlined::before { content: none; }
+
+    /* ---------- Fullpage engine ---------- */
+    #deck {
+      height: 100vh;
+      transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+      will-change: transform;
+    }
+    .panel {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      overflow: clip;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      contain: layout paint;
+      isolation: isolate;
+      transform: translateZ(0);
+    }
+    .panel > .relative { z-index: 2; }
+    .panel:not(:first-child) > .relative {
+      padding-top: 96px;
+      padding-bottom: 48px;
+    }
+    .panel-bg {
+      position: absolute; inset: 0;
+      background-color: #0c1210;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.12);
+      transition: transform 6s ease-out;
+    }
+    .panel.active .panel-bg { transform: scale(1); }
+
+    /* ---- Background image classes (landscape default) ---- */
+    .panel.active .bg-mb, .panel.bg-loaded .bg-mb { background-image: url('alps_assets/mont_blanc.webp'); }
+    .panel.active .bg-do, .panel.bg-loaded .bg-do { background-image: url('alps_assets/dolomites.webp'); }
+    .panel.active .bg-ma, .panel.bg-loaded .bg-ma { background-image: url('alps_assets/matterhorn.webp'); }
+    .panel.active .bg-ju, .panel.bg-loaded .bg-ju { background-image: url('alps_assets/jungfrau.webp'); }
+    /* ---- Portrait / mobile background swap ---- */
+    @media (max-width: 768px) {
+      .panel.active .bg-mb, .panel.bg-loaded .bg-mb { background-image: url('alps_assets/mont_blanc_p.webp'); }
+      .panel.active .bg-do, .panel.bg-loaded .bg-do { background-image: url('alps_assets/dolomites_p.webp'); }
+      .panel.active .bg-ma, .panel.bg-loaded .bg-ma { background-image: url('alps_assets/matterhorn_p.webp'); }
+      .panel.active .bg-ju, .panel.bg-loaded .bg-ju { background-image: url('alps_assets/jungfrau_p.webp'); }
+    }
+
+    .hero-gradient { background: linear-gradient(to bottom, rgba(12,18,16,0.15) 0%, rgba(12,18,16,0.55) 55%, rgba(12,18,16,0.95) 100%); }
+    .side-gradient { background: linear-gradient(105deg, rgba(12,18,16,0.95) 0%, rgba(12,18,16,0.72) 42%, rgba(12,18,16,0.20) 100%); }
+
+    .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.14); }
+
+    /* ---------- Reveal animation ---------- */
+    .reveal { opacity: 1; transform: none; }
+    body.js-ready .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s ease, transform 0.9s ease; }
+    body.js-ready .panel.active .reveal { opacity: 1; transform: translateY(0); }
+    .panel.active .d1 { transition-delay: 0.15s; }
+    .panel.active .d2 { transition-delay: 0.30s; }
+    .panel.active .d3 { transition-delay: 0.45s; }
+    .panel.active .d4 { transition-delay: 0.60s; }
+    .panel.active .d5 { transition-delay: 0.75s; }
+
+    /* ---------- Per-region accent (visual echo) ---------- */
+    .region-fr  { --day-accent:#d8b66a; --day-accent-soft:rgba(216,182,106,0.20); }
+    .region-it  { --day-accent:#e8714f; --day-accent-soft:rgba(232,113,79,0.22); }
+    .region-ch1 { --day-accent:#67c7ea; --day-accent-soft:rgba(103,199,234,0.20); }
+    .region-ch2 { --day-accent:#f3938f; --day-accent-soft:rgba(243,147,143,0.20); }
+
+    /* ---------- Day panel styling ---------- */
+    .day-bg { transform: scale(1.18); filter: blur(3px) brightness(0.5); }
+    .panel.active .day-bg { transform: scale(1.08); }
+    .day-scrim { background: linear-gradient(115deg, rgba(12,18,16,0.86) 0%, rgba(12,18,16,0.55) 50%, rgba(12,18,16,0.78) 100%); }
+    .day-num { color: var(--day-accent); text-shadow: 0 6px 30px rgba(0,0,0,0.35); }
+    .day-accent-text { color: var(--day-accent); }
+    .day-highlight {
+      border-left: 3px solid var(--day-accent);
+      background: linear-gradient(90deg, var(--day-accent-soft), rgba(255,255,255,0.02));
+      border-radius: 0 16px 16px 0;
+      padding: 14px 20px;
+    }
+    .timeline { position: relative; }
+    .tl-item { display: flex; gap: 14px; align-items: flex-start; position: relative; padding-bottom: 16px; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before {
+      content: ''; position: absolute; left: 15px; top: 32px; bottom: -2px; width: 1.5px;
+      background: rgba(255,255,255,0.18);
+    }
+    .tl-item:last-child::before { display: none; }
+    .tl-icon {
+      width: 32px; height: 32px; flex: 0 0 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-size: 15px;
+      background: var(--day-accent-soft); border: 1px solid var(--day-accent);
+    }
+    .tl-time { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; color: var(--day-accent); text-transform: uppercase; margin-bottom: 2px; }
+    .tl-text { font-size: 14.5px; line-height: 1.5; color: rgba(255,255,255,0.92); }
+    .day-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 12px; font-weight: 600; line-height: 1.4;
+      padding: 9px 15px; border-radius: 14px;
+      background: rgba(255,255,255,0.10); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.16); color: rgba(255,255,255,0.92);
+    }
+    .day-badge .bdg-ico { font-size: 13px; }
+    .badge-tip { flex: 1 1 auto; }
+
+    /* ---------- Horizontal-scroll card rows / ViewPager (anti-truncation) ---------- */
+    .hscroll {
+      display: flex; gap: 12px; overflow-x: auto; overflow-y: hidden;
+      scroll-snap-type: x mandatory; overscroll-behavior-x: contain; touch-action: pan-x;
+      margin: 0 -32px; padding: 4px 0 6px 32px;
+      scroll-padding-left: 32px; scroll-padding-right: 32px;
+      scrollbar-width: none; -ms-overflow-style: none;
+    }
+    /* ViewPager: left-aligned start, one card per swipe, next card peeks on the right */
+    .hscroll > * { scroll-snap-align: start; scroll-snap-stop: always; }
+    /* Symmetric trailing gap: a real spacer (always counted in scrollWidth) so the last
+       card rests with exactly the same 32px breathing room as the first card's padding-left,
+       avoiding the browser bug where a last-child margin-right is dropped from scroll extent. */
+    .hscroll::after { content: ''; flex: 0 0 32px; align-self: stretch; }
+    .hscroll::-webkit-scrollbar { display: none; width: 0; height: 0; -webkit-appearance: none; background: transparent; }
+    .hcard { flex: 0 0 82vw; }
+    .scroll-fade { display: none; }
+    @media (min-width: 768px) {
+      .hscroll { display: grid; grid-template-columns: repeat(var(--cols,3), minmax(0,1fr)); overflow: visible; padding: 0; margin: 0; }
+      .hscroll::after { display: none; }
+      .hcard { flex: none; }
+    }
+
+    /* ---------- Hand-drawn route map (accommodation page) ---------- */
+    .route-map-wrap { margin: 16px 0 20px; width: 100%; }
+    .route-map-wrap img { display: block; width: 100%; height: auto; border-radius: 18px; }
+
+    /* ---------- Dot nav ---------- */
+    #dots {
+      position: fixed; right: 24px; top: 50%; transform: translateY(-50%);
+      z-index: 60; display: flex; flex-direction: column; gap: 9px;
+    }
+    .dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: rgba(255,255,255,0.35);
+      border: 1px solid rgba(255,255,255,0.5);
+      cursor: pointer; transition: all 0.4s ease; position: relative;
+    }
+    .dot:hover { background: rgba(255,255,255,0.7); }
+    .dot.on { background: var(--gold); border-color: var(--gold); height: 24px; border-radius: 6px; }
+    .dot .lbl {
+      position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+      white-space: nowrap; font-size: 11px; color: #fff; letter-spacing: .1em;
+      background: rgba(0,0,0,0.45); padding: 3px 9px; border-radius: 4px;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    }
+    .dot:hover .lbl { opacity: 1; }
+
+    /* ---------- Top bar ---------- */
+    #topbar {
+      position: fixed; top: 18px; left: 22px; right: 22px; z-index: 55;
+      padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;
+      color: rgba(255,255,255,0.92);
+      background: rgba(12,18,16,0.30);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.16);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      opacity: 1; transform: translateY(0); pointer-events: auto;
+      transition: color 0.35s ease, background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+    #topbar .brand, #topbar #counter { color: currentColor; }
+    #topbar .brand-icon { color: var(--gold); }
+    #topbar #counter span { color: color-mix(in srgb, currentColor 45%, transparent); }
+    body.light-panel #topbar {
+      color: rgba(12,18,16,0.88);
+      background: rgba(249,247,242,0.76);
+      border-color: rgba(12,18,16,0.10);
+      box-shadow: 0 12px 34px rgba(12,18,16,0.10);
+    }
+    #progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); z-index: 70; transition: width 0.8s ease; }
+
+    /* ---------- Scroll hint ---------- */
+    #hint {
+      position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 55;
+      color: #fff; display: flex; flex-direction: column; align-items: center; gap: 4px;
+      opacity: 1; transition: opacity 0.45s ease, transform 0.45s ease; pointer-events: none;
+    }
+    body:not(.is-cover) #hint { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    .mouse { width: 22px; height: 34px; border: 2px solid rgba(255,255,255,0.7); border-radius: 12px; position: relative; }
+    .mouse::after { content: ''; position: absolute; left: 50%; top: 20px; width: 3px; height: 6px; background: #fff; border-radius: 2px; transform: translateX(-50%); animation: wheel 1.5s infinite; }
+    @keyframes wheel { 0% { opacity: 1; top: 20px; } 100% { opacity: 0; top: 8px; } }
+    .hint-arrow { font-size: 22px; color: #fff; line-height: 1; animation: bobUp 1.5s infinite; }
+    @keyframes bobUp { 0% { opacity: 0.3; transform: translateY(4px); } 50% { opacity: 1; } 100% { opacity: 0.3; transform: translateY(-4px); } }
+
+    .tag { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+    .chip { backdrop-filter: blur(6px); }
+
+    @media (max-width: 768px) {
+      #dots { right: 10px; gap: 7px; }
+      #topbar { top: 12px; left: 12px; right: 12px; padding: 9px 12px; }
+      .panel:not(:first-child) > .relative { padding-top: 80px; padding-bottom: 28px; }
+      .panel { justify-content: center; }
+      /* Accommodation panel: keep the whole card area vertically centred */
+      .panel[data-label="下榻"] > .relative { padding-top: 72px; padding-bottom: 24px; }
+      .day-panel > .relative { padding-top: 78px; }
+      .tl-text { font-size: 13.5px; }
+      .day-highlight .serif { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body class="antialiased is-cover">
+
+  <div id="progress" style="width:0%"></div>
+
+  <!-- Top bar -->
+  <div id="topbar">
+    <div class="brand flex items-center gap-2">
+      <span class="brand-icon material-symbols-outlined" data-symbol="△" aria-hidden="true">mountain_flag</span>
+      <span class="font-bold tracking-tighter text-lg">ALPS PEAK 15</span>
+    </div>
+    <div id="counter" class="text-sm font-bold tracking-widest serif">01 <span>/ 24</span></div>
+  </div>
+
+  <!-- Dot nav -->
+  <div id="dots"></div>
+
+  <!-- Scroll hint -->
+  <div id="hint">
+    <div class="mouse"></div>
+  </div>
+
+  <!-- ============ DECK ============ -->
+  <div id="deck">
+
+    <!-- Panel 1: HERO -->
+    <section class="panel active" data-label="封面">
+      <div class="panel-bg bg-mb"></div>
+      <div class="absolute inset-0 hero-gradient"></div>
+      <div class="relative w-full max-w-6xl mx-auto px-8 pb-24 self-end">
+        <div class="reveal d1 inline-block text-white text-[10px] font-black uppercase tracking-[0.4em] px-4 py-1 mb-6" style="background:var(--gold)">Epic Grand Tour</div>
+        <h1 class="reveal d2 serif text-white text-6xl md:text-9xl leading-[0.95] mb-8">
+          <span class="block">法意瑞</span>
+          <span class="block italic font-normal mt-4 md:mt-6">阿尔卑斯</span>
+        </h1>
+        <p class="reveal d3 text-white/80 max-w-2xl text-lg md:text-xl font-light leading-relaxed mb-10">穿越欧洲屋脊的 15 天朝圣：从霞慕尼的万年冰川，到多洛米蒂的锯齿红岩，再到马特洪峰的完美倒影与少女峰下的田园。</p>
+        <div class="reveal d4 flex flex-wrap gap-6 text-white text-sm font-bold tracking-widest uppercase">
+          <div class="flex items-center gap-2"><span class="material-symbols-outlined" data-symbol="□" aria-hidden="true" style="color:var(--gold)">calendar_today</span> 15 DAYS</div>
+          <div class="flex items-center gap-2"><span class="material-symbols-outlined" data-symbol="●" aria-hidden="true" style="color:var(--gold)">location_on</span> 3 COUNTRIES</div>
+          <div class="flex items-center gap-2"><span class="material-symbols-outlined" data-symbol="✈" aria-hidden="true" style="color:var(--gold)">flight_takeoff</span> FROM SZX/CAN/HKG</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel 2: OVERVIEW -->
+    <section class="panel" data-label="缘起" data-theme="light" style="background:var(--paper)">
+      <div class="relative w-full max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-5 md:gap-14 items-center">
+        <div>
+          <div class="reveal d1 text-xs font-bold tracking-widest uppercase mb-3" style="color:var(--gold-dark)">The Philosophy</div>
+          <h2 class="reveal d1 serif text-3xl md:text-6xl mb-3 md:mb-8 leading-tight" style="color:var(--ink)">致敬那些<br>不安分的灵魂</h2>
+          <p class="reveal d2 text-sm md:text-lg leading-relaxed md:leading-loose mb-4 md:mb-8 italic" style="color:var(--muted)">"阿尔卑斯不是一组地理名词，而是一种生活方式。是在清晨 3842 米的寒风中看第一缕阳光照亮南针峰，是在多洛米蒂蜿蜒的山口公路上感受自由。"</p>
+          <div class="space-y-3 md:space-y-6">
+            <div class="reveal d3 flex gap-4">
+              <span class="material-symbols-outlined text-3xl" data-symbol="✓" aria-hidden="true" style="color:var(--gold)">verified</span>
+              <div><h4 class="font-bold" style="color:var(--ink)">地理级视觉盛宴</h4><p class="text-sm" style="color:var(--muted)">严格筛选全球最美观景位，绝非走马观花。</p></div>
+            </div>
+            <div class="reveal d4 flex gap-4">
+              <span class="material-symbols-outlined text-3xl" data-symbol="▰" aria-hidden="true" style="color:var(--gold)">directions_car</span>
+              <div><h4 class="font-bold" style="color:var(--ink)">无缝转场体验</h4><p class="text-sm" style="color:var(--muted)">结合自驾自由度与瑞士铁路的精准。</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mt-1 md:mt-0">
+          <div class="reveal d2 rounded-3xl overflow-hidden aspect-[2/1] sm:aspect-[3/4]"><img src="alps_assets/dolomites.webp" class="h-full w-full object-cover" width="1920" height="1072" loading="lazy" decoding="async" alt="多洛米蒂红岩山峰"></div>
+          <div class="reveal d4 rounded-3xl overflow-hidden aspect-[3/4] sm:mt-10 hidden sm:block"><img src="alps_assets/matterhorn.webp" class="h-full w-full object-cover" width="1920" height="1072" loading="lazy" decoding="async" alt="马特洪峰山景"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel 3: LOGISTICS -->
+    <section class="panel" data-label="大交通" style="background:var(--forest)">
+      <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none text-white"><span class="material-symbols-outlined" data-symbol="✈" aria-hidden="true" style="font-size:380px">flight</span></div>
+      <div class="relative w-full max-w-6xl mx-auto px-8 text-white">
+        <div class="reveal d1 text-xs font-bold tracking-widest uppercase mb-3" style="color:var(--gold)">Getting There & Around</div>
+        <h2 class="reveal d1 serif text-4xl md:text-5xl mb-8 md:mb-12">大交通规划</h2>
+        <div class="hscroll reveal d2" style="--cols:3">
+          <div class="hcard glass p-7 md:p-8 rounded-3xl">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" data-symbol="▣" aria-hidden="true" style="color:var(--gold)">airplane_ticket</span></div>
+            <h3 class="text-xl font-bold mb-4">机票方案</h3>
+            <ul class="text-sm text-white/70 space-y-3">
+              <li><strong class="text-white">去程：</strong>深圳 SZX 直飞米兰 MXP（海航）；或广州 CAN / 香港 HKG 经法兰克福 / 多哈中转抵达日内瓦 GVA。</li>
+              <li><strong class="text-white">回程：</strong>从苏黎世 ZRH 或日内瓦 GVA 出发返程。</li>
+            </ul>
+          </div>
+          <div class="hcard glass p-7 md:p-8 rounded-3xl">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" data-symbol="↬" aria-hidden="true" style="color:var(--gold)">alt_route</span></div>
+            <h3 class="text-xl font-bold mb-4">城际衔接</h3>
+            <ul class="text-sm text-white/70 space-y-3">
+              <li><strong class="text-white">法→意：</strong>穿越 11.6km 勃朗峰隧道，自驾最高效。</li>
+              <li><strong class="text-white">意→瑞：</strong>奥尔蒂塞伊经米兰、Visp 转火车进入采尔马特。</li>
+            </ul>
+          </div>
+          <div class="hcard glass p-7 md:p-8 rounded-3xl">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background:rgba(197,160,89,0.2)"><span class="material-symbols-outlined" data-symbol="▤" aria-hidden="true" style="color:var(--gold)">train</span></div>
+            <h3 class="text-xl font-bold mb-4">区域通行</h3>
+            <ul class="text-sm text-white/70 space-y-3">
+              <li><strong class="text-white">瑞士旅行通票：</strong>覆盖采尔马特至格林德瓦全线火车。</li>
+              <li><strong class="text-white">多洛米蒂自驾：</strong>山路复杂，建议租紧凑型 SUV。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Region cover: 霞慕尼 -->
+    <section class="panel cover-panel region-fr" data-label="霞慕尼">
+      <div class="panel-bg bg-mb"></div>
+      <div class="absolute inset-0 side-gradient"></div>
+      <div class="relative w-full max-w-6xl mx-auto px-8 text-white">
+        <div class="max-w-xl">
+          <div class="reveal d1 serif text-7xl md:text-8xl mb-2" style="color:var(--gold)">D1–3</div>
+          <div class="reveal d1 text-xs font-bold tracking-[0.3em] uppercase mb-4">Phase 1 · France</div>
+          <h2 class="reveal d2 serif text-4xl md:text-5xl mb-6">霞慕尼 · 勃朗峰</h2>
+          <p class="reveal d3 text-white/85 text-lg leading-relaxed mb-8">落地日内瓦后直奔霞慕尼——1924 年首届冬奥会举办地。D2 冲上 3842 米南针峰俯瞰勃朗峰，D3 乘红色齿轨小火车前往冰海 (Mer de Glace)。</p>
+          <div class="reveal d4 flex flex-wrap gap-3">
+            <span class="tag chip text-white" style="background:rgba(197,160,89,0.35)">南针峰缆车</span>
+            <span class="tag chip text-white" style="background:rgba(197,160,89,0.35)">冰海齿轨列车</span>
+            <span class="tag chip text-white" style="background:rgba(255,255,255,0.18)">基地：Chamonix</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D1 -->
+    <section class="panel day-panel region-fr" data-label="D1">
+      <div class="panel-bg day-bg bg-mb"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D1</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 1 · France</div>
+            <div class="serif text-xl md:text-2xl leading-tight">抵达日内瓦 · 转场霞慕尼</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">落地欧洲屋脊 · 霞慕尼小镇</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">抵达日内瓦机场，提车 / 乘大巴启程</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">沿 A40 一路向东，约 1 小时直抵霞慕尼，办理入住</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">镇中心石板街漫步，采购次日徒步补给</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Chamonix（法国）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：日内瓦提车后约 1 小时到霞慕尼，提前下载离线地图与停车 App</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D2 -->
+    <section class="panel day-panel region-fr" data-label="D2">
+      <div class="panel-bg day-bg bg-mb"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D2</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 1 · France</div>
+            <div class="serif text-xl md:text-2xl leading-tight">南针峰 · 直面勃朗峰</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">南针峰缆车 · 3842m</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">搭早班缆车直上南针峰 Aiguille du Midi 3842m</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">走进「虚空之窗」玻璃箱，俯瞰勃朗峰冰川群</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">返镇品尝萨瓦芝士火锅，缓解高海拔疲惫</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Chamonix（法国）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：缆车需官网预约时段；山顶比镇上低 15-20℃，务必带羽绒服</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D3 -->
+    <section class="panel day-panel region-fr" data-label="D3">
+      <div class="panel-bg day-bg bg-mb"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D3</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 1 · France</div>
+            <div class="serif text-xl md:text-2xl leading-tight">冰海 · 红色齿轨小火车</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">冰海齿轨列车 · Mer de Glace</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">蒙特维尔红色齿轨小火车驶向冰海 Mer de Glace</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">下行参观蓝色冰洞，徒步 Grand Balcon Nord 观景台</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">整理行装，为次日跨国转场意大利做准备</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Chamonix（法国）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：冰川退缩明显，下冰洞需走约 400 级台阶，量力而行</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Region cover: 多洛米蒂 -->
+    <section class="panel cover-panel region-it" data-label="多洛米蒂">
+      <div class="panel-bg bg-do"></div>
+      <div class="absolute inset-0 side-gradient"></div>
+      <div class="relative w-full max-w-6xl mx-auto px-8 text-white">
+        <div class="max-w-xl">
+          <div class="reveal d1 serif text-7xl md:text-8xl mb-2" style="color:var(--accent)">D4–8</div>
+          <div class="reveal d1 text-xs font-bold tracking-[0.3em] uppercase mb-4">Phase 2 · Italy</div>
+          <h2 class="reveal d2 serif text-4xl md:text-5xl mb-6">多洛米蒂 · 红岩之巅</h2>
+          <p class="reveal d3 text-white/85 text-lg leading-relaxed mb-8">穿越隧道进入意大利。D5–6 驻扎科尔蒂纳徒步三尖峰 (Tre Cime)；D7 沿大公路前往奥尔蒂塞伊，D8 乘缆车直达 Seceda 刀锋山脊，体验最震撼的垂直落差。</p>
+          <div class="reveal d4 flex flex-wrap gap-3">
+            <span class="tag chip text-white" style="background:rgba(212,77,46,0.4)">三尖峰徒步</span>
+            <span class="tag chip text-white" style="background:rgba(212,77,46,0.4)">Seceda 缆车</span>
+            <span class="tag chip text-white" style="background:rgba(255,255,255,0.18)">基地：Cortina / Ortisei</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D4 -->
+    <section class="panel day-panel region-it" data-label="D4">
+      <div class="panel-bg day-bg bg-do"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D4</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 2 · Italy</div>
+            <div class="serif text-xl md:text-2xl leading-tight">勃朗峰隧道 · 跨国进意大利</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">勃朗峰隧道 · 跨国自驾</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">穿越 11.6km 勃朗峰隧道，抵意大利库马约尔</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">沿高速一路东行，傍晚抵达科尔蒂纳 Cortina</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">Cortina 步行街晚餐，感受多洛米蒂山城夜色</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Cortina（意大利）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：意法高速分段收费，备信用卡过路；山路弯多，注意中途休息</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D5 -->
+    <section class="panel day-panel region-it" data-label="D5">
+      <div class="panel-bg day-bg bg-do"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D5</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 2 · Italy</div>
+            <div class="serif text-xl md:text-2xl leading-tight">三尖峰环线徒步</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">三尖峰环线 · Tre Cime</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">驱车至 Rifugio Auronzo，开启三尖峰环线</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">约 10km 环线，经 Locatelli 山屋拍经典三峰立面</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">返回 Cortina 休整，犒赏一餐意式山区料理</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Cortina（意大利）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：停车场旺季 9 点前满位，建议早到；环线约需 4-5 小时</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D6 -->
+    <section class="panel day-panel region-it" data-label="D6">
+      <div class="panel-bg day-bg bg-do"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D6</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 2 · Italy</div>
+            <div class="serif text-xl md:text-2xl leading-tight">镜湖晨光 · 法罗利亚全景</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">镜面湖光 · Misurina</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">密苏丽娜湖 Lago di Misurina 捕捉无风晨景</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">法罗利亚缆车登顶，俯瞰 Cortina 山谷全景</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">收拾行装，规划次日多洛米蒂大公路西行</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Cortina（意大利）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：午后山区多雷暴，户外拍摄与徒步尽量安排在上午</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D7 -->
+    <section class="panel day-panel region-it" data-label="D7">
+      <div class="panel-bg day-bg bg-do"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D7</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 2 · Italy</div>
+            <div class="serif text-xl md:text-2xl leading-tight">多洛米蒂大公路转场</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">多洛米蒂大公路 · 山口自驾</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">沿 Great Dolomites Road 西行，穿行群峰之间</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">翻越 Passo Pordoi 山口，抵达奥尔蒂塞伊 Ortisei</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">入住 Val Gardena 山谷，木屋温泉小镇歇脚</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Ortisei（意大利）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：山口公路坡陡弯急，预留充足拍照与休息时间</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D8 -->
+    <section class="panel day-panel region-it" data-label="D8">
+      <div class="panel-bg day-bg bg-do"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D8</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 2 · Italy</div>
+            <div class="serif text-xl md:text-2xl leading-tight">Seceda 刀锋 · 高山草甸</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">Seceda 缆车 · 刀锋山脊</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">两段缆车直上 Seceda 2500m 刀锋山脊</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">漫步 Alpe di Siusi 欧洲最大高山草甸</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">告别多洛米蒂，整理行装准备进入瑞士</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Ortisei（意大利）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：Seceda 上下两段缆车，预留半天；草甸日落极美值得守候</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Region cover: 采尔马特 -->
+    <section class="panel cover-panel region-ch1" data-label="采尔马特">
+      <div class="panel-bg bg-ma"></div>
+      <div class="absolute inset-0 side-gradient"></div>
+      <div class="relative w-full max-w-6xl mx-auto px-8 text-white">
+        <div class="max-w-xl">
+          <div class="reveal d1 serif text-7xl md:text-8xl mb-2" style="color:#7dd3fc">D9–11</div>
+          <div class="reveal d1 text-xs font-bold tracking-[0.3em] uppercase mb-4">Phase 3 · Switzerland</div>
+          <h2 class="reveal d2 serif text-4xl md:text-5xl mb-6">采尔马特 · 马特洪峰</h2>
+          <p class="reveal d3 text-white/85 text-lg leading-relaxed mb-8">转场日稍长但值得。D10 乘 Gornergrat 登山铁路看雪山全景；D11 在 Riffelsee 湖边静候无风时刻，捕捉马特洪峰的完美倒影——瑞士旅行的终极符号。</p>
+          <div class="reveal d4 flex flex-wrap gap-3">
+            <span class="tag chip text-white" style="background:rgba(56,189,248,0.35)">Gornergrat 铁路</span>
+            <span class="tag chip text-white" style="background:rgba(56,189,248,0.35)">Riffelsee 倒影</span>
+            <span class="tag chip text-white" style="background:rgba(255,255,255,0.18)">基地：Zermatt（禁燃油车）</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D9 -->
+    <section class="panel day-panel region-ch1" data-label="D9">
+      <div class="panel-bg day-bg bg-ma"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D9</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 3 · Switzerland</div>
+            <div class="serif text-xl md:text-2xl leading-tight">长途转场 · 进入采尔马特</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">进入采尔马特 · 禁燃油车小镇</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">驱车经米兰还车，火车一路向北至 Visp</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">Visp 换乘登山火车，进入无燃油车小镇采尔马特</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">班霍夫大街漫步，与马特洪峰初次相见</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Zermatt（瑞士）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：采尔马特禁私家车，需在 Täsch 停车换乘接驳；瑞士旅行通票更划算</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D10 -->
+    <section class="panel day-panel region-ch1" data-label="D10">
+      <div class="panel-bg day-bg bg-ma"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D10</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 3 · Switzerland</div>
+            <div class="serif text-xl md:text-2xl leading-tight">Gornergrat 雪山全景</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">Gornergrat 铁路 · 雪山全景</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">乘 Gornergrat 齿轨火车登 3089m 观景平台</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">全景台远眺罗莎峰群与冰川，与马特洪峰合影</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">镇上享一锅地道瑞士芝士火锅暖身</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Zermatt（瑞士）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：上山坐车厢右侧视野最佳；山顶有欧洲最高酒店，可留宿看日出</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D11 -->
+    <section class="panel day-panel region-ch1" data-label="D11">
+      <div class="panel-bg day-bg bg-ma"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D11</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Phase 3 · Switzerland</div>
+            <div class="serif text-xl md:text-2xl leading-tight">Riffelsee 倒影 · 五湖徒步</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">马特洪峰倒影 · Riffelsee</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">Riffelsee 湖边静候无风时刻，拍马特洪峰倒影</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">五湖徒步 5-Seenweg，集齐多角度倒影机位</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">收拾行装，准备转场少女峰下的格林德瓦</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Zermatt（瑞士）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：清晨风小水面最静，倒影成功率最高；徒步随身带防风外套</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Region cover: 格林德瓦 -->
+    <section class="panel cover-panel region-ch2" data-label="格林德瓦">
+      <div class="panel-bg bg-ju"></div>
+      <div class="absolute inset-0 side-gradient"></div>
+      <div class="relative w-full max-w-6xl mx-auto px-8 text-white">
+        <div class="max-w-xl">
+          <div class="reveal d1 serif text-7xl md:text-8xl mb-2" style="color:#f87171">D12–15</div>
+          <div class="reveal d1 text-xs font-bold tracking-[0.3em] uppercase mb-4">Final · Switzerland</div>
+          <h2 class="reveal d2 serif text-4xl md:text-5xl mb-6">格林德瓦 · 少女峰</h2>
+          <p class="reveal d3 text-white/85 text-lg leading-relaxed mb-8">D12 转战格林德瓦。D13 登上「欧洲之巅」少女峰火车站；D14 在 First 体验山间卡丁车或 Cliff Walk 悬崖步道。D15 前往苏黎世，带着满载的回忆返航。</p>
+          <div class="reveal d4 flex flex-wrap gap-3">
+            <span class="tag chip text-white" style="background:rgba(248,113,113,0.35)">少女峰火车站</span>
+            <span class="tag chip text-white" style="background:rgba(248,113,113,0.35)">First Cliff Walk</span>
+            <span class="tag chip text-white" style="background:rgba(255,255,255,0.18)">基地：Grindelwald</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D12 -->
+    <section class="panel day-panel region-ch2" data-label="D12">
+      <div class="panel-bg day-bg bg-ju"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D12</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Final · Switzerland</div>
+            <div class="serif text-xl md:text-2xl leading-tight">转战格林德瓦</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">抵达格林德瓦 · 艾格峰下</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">火车经 Visp、Spiez 一路向北穿越湖区</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">抵达少女峰脚下的格林德瓦 Grindelwald</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">入住山间木屋，欣赏艾格峰北壁夕照</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Grindelwald（瑞士）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：Eiger Express 缆车转场更快；继续沿用瑞士旅行通票</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D13 -->
+    <section class="panel day-panel region-ch2" data-label="D13">
+      <div class="panel-bg day-bg bg-ju"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D13</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Final · Switzerland</div>
+            <div class="serif text-xl md:text-2xl leading-tight">少女峰 · 欧洲之巅</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">欧洲之巅 · 少女峰 3454m</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">登上「欧洲之巅」少女峰火车站 3454m</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">斯芬克斯观景台、阿莱奇冰川与晶莹冰宫</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">返回格林德瓦休整，回味云端一日</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Grindelwald（瑞士）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：山顶含氧低，慢行防高反；晴天才值得上，出发前紧盯天气预报</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D14 -->
+    <section class="panel day-panel region-ch2" data-label="D14">
+      <div class="panel-bg day-bg bg-ju"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D14</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Final · Switzerland</div>
+            <div class="serif text-xl md:text-2xl leading-tight">First 悬崖步道 · 山地探险</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">First Cliff Walk · 悬崖步道</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">First 缆车上山，挑战 Cliff Walk 悬崖步道</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">山间卡丁车 Mountain Cart、滑板车一路俯冲下山</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">格林德瓦告别晚宴，为旅程画下句点</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：Grindelwald（瑞士）</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：四项山地活动可买套票；雨天悬崖步道关闭，留意临时改期</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day D15 -->
+    <section class="panel day-panel region-ch2" data-label="D15">
+      <div class="panel-bg day-bg bg-ju"></div>
+      <div class="absolute inset-0 day-scrim"></div>
+      <div class="relative w-full max-w-3xl mx-auto px-7 text-white">
+        <div class="reveal d1 flex items-end gap-4 mb-6">
+          <div class="serif leading-[0.8] text-7xl md:text-8xl day-num">D15</div>
+          <div class="pb-2">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-white/65 mb-1">Final · Switzerland</div>
+            <div class="serif text-xl md:text-2xl leading-tight">苏黎世返航</div>
+          </div>
+        </div>
+
+        <div class="reveal d2 day-highlight mb-7">
+          <div class="text-[10px] font-bold tracking-[0.25em] uppercase day-accent-text mb-1">今日亮点 · Highlight</div>
+          <div class="serif text-2xl md:text-3xl leading-tight">满载而归 · 苏黎世返航</div>
+        </div>
+
+        <div class="reveal d3 timeline mb-7">
+          <div class="tl-item">
+            <div class="tl-icon">&#9728;&#65039;</div>
+            <div class="tl-body"><div class="tl-time">上午 · Morning</div><div class="tl-text">格林德瓦出发，火车前往苏黎世</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127781;</div>
+            <div class="tl-body"><div class="tl-time">下午 · Afternoon</div><div class="tl-text">苏黎世老城与班霍夫大街采购手信</div></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon">&#127769;</div>
+            <div class="tl-body"><div class="tl-time">晚上 · Evening</div><div class="tl-text">苏黎世机场 ZRH 搭乘返程航班，结束旅程</div></div>
+          </div>
+        </div>
+
+        <div class="reveal d4 flex flex-col sm:flex-row gap-3">
+          <span class="day-badge"><span class="bdg-ico">&#127976;</span> 基地：途中 / 苏黎世 ZRH</span>
+          <span class="day-badge badge-tip"><span class="bdg-ico">&#128161;</span> Tips：预留 3 小时以上转场到机场；机场退税需排队，留足时间</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accommodations -->
+    <section class="panel" data-label="下榻" data-theme="light" style="background:var(--paper)">
+      <div class="relative w-full max-w-6xl mx-auto px-8">
+        <div class="reveal d1 text-xs font-bold tracking-widest uppercase mb-3" style="color:var(--gold-dark)">Where to Stay</div>
+        <h2 class="reveal d1 serif text-3xl md:text-5xl mb-2" style="color:var(--ink)">宿在阿尔卑斯</h2>
+        <p class="reveal d1 text-sm mb-5 md:mb-7" style="color:var(--muted)">每个基地两档选择，左右滑动逐张浏览四大区域 →</p>
+        <div class="route-map-wrap reveal d1"><img src="alps_assets/route_map_transparent.webp" width="1800" height="764" alt="透明背景手绘风阿尔卑斯路线图：霞慕尼、多洛米蒂、采尔马特、格林德瓦" loading="lazy" decoding="async" /></div>
+        <div class="hscroll reveal d2" style="--cols:4">
+          <div class="hcard bg-white p-6 rounded-3xl border border-gray-100/70" style="box-shadow:0 14px 32px -18px rgba(26,54,45,0.16), 0 4px 10px -6px rgba(26,54,45,0.08)">
+            <h4 class="font-bold mb-4" style="color:var(--gold-dark)">CHAMONIX · 霞慕尼</h4>
+            <div class="space-y-4">
+              <div><div class="text-[10px] uppercase tracking-widest mb-1" style="color:var(--muted)">豪华景观</div><div class="font-bold" style="color:var(--ink)">Hameau Albert 1er</div><p class="text-xs" style="color:var(--muted)">米其林餐厅加持，窗外即勃朗峰。</p></div>
+              <div><div class="text-[10px] uppercase tracking-widest mb-1" style="color:var(--muted)">高性价比</div><div class="font-bold" style="color:var(--ink)">Hotel Pointe Isabelle</div><p class="text-xs" style="color:var(--muted)">镇中心绝佳位置，现代简约。</p></div>
+            </div>
+          </div>
+          <div class="hcard bg-white p-6 rounded-3xl border border-gray-100/70" style="box-shadow:0 14px 32px -18px rgba(26,54,45,0.16), 0 4px 10px -6px rgba(26,54,45,0.08)">
+            <h4 class="font-bold mb-4" style="color:var(--accent)">DOLOMITES · 多洛米蒂</h4>
+            <div class="space-y-4">
+              <div><div class="text-[10px] uppercase tracking-widest mb-1" style="color:var(--muted)">豪华景观</div><div class="font-bold" style="color:var(--ink)">Adler Spa Resort Dolomiti</div><p class="text-xs" style="color:var(--muted)">Ortisei，极致 SPA 与山间泳池。</p></div>
+              <div><div class="text-[10px] uppercase tracking-widest mb-1" style="color:var(--muted)">高性价比</div><div class="font-bold" style="color:var(--ink)">Hotel Montana</div><p class="text-xs" style="color:var(--muted)">Cortina 步行街旁，温馨家庭旅馆。</p></div>
+            </div>
+          </div>
+          <div class="hcard bg-white p-6 rounded-3xl border border-gray-100/70" style="box-shadow:0 14px 32px -18px rgba(26,54,45,0.16), 0 4px 10px -6px rgba(26,54,45,0.08)">
+            <h4 class="font-bold mb-4 text-sky-600">ZERMATT · 采尔马特</h4>
+            <div class="space-y-4">
+              <div><div class="text-[10px] uppercase tracking-widest mb-1" style="color:var(--muted)">豪华景观</div><div class="font-bold" style="color:var(--ink)">The Omnia · Zermatt</div><p class="text-xs" style="color:var(--muted)">悬崖之上，极简美学正对马特洪峰。</p></div>
+              <div><div class="text-[10px] uppercase tracking-widest mb-1" style="color:var(--muted)">高性价比</div><div class="font-bold" style="color:var(--ink)">Bahnhof Hotel</div><p class="text-xs" style="color:var(--muted)">火车站正对面，干净实用实惠。</p></div>
+            </div>
+          </div>
+          <div class="hcard bg-white p-6 rounded-3xl border border-gray-100/70" style="box-shadow:0 14px 32px -18px rgba(26,54,45,0.16), 0 4px 10px -6px rgba(26,54,45,0.08)">
+            <h4 class="font-bold mb-4 text-red-400">GRINDELWALD · 格林德瓦</h4>
+            <div class="space-y-4">
+              <div><div class="text-[10px] uppercase tracking-widest mb-1" style="color:var(--muted)">豪华景观</div><div class="font-bold" style="color:var(--ink)">Hotel Belvedere</div><p class="text-xs" style="color:var(--muted)">百年经典，露台正对艾格峰北壁。</p></div>
+              <div><div class="text-[10px] uppercase tracking-widest mb-1" style="color:var(--muted)">高性价比</div><div class="font-bold" style="color:var(--ink)">Hotel Bernerhof</div><p class="text-xs" style="color:var(--muted)">近火车站，质朴瑞士木屋风。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="panel" data-label="启程" style="background:var(--forest)">
+      <div class="relative w-full max-w-3xl mx-auto px-8 text-center text-white">
+        <h2 class="reveal d1 serif text-4xl md:text-6xl mb-7 leading-tight" style="text-wrap:balance">山脉在呼唤<br>你准备好了吗？</h2>
+        <p class="reveal d2 text-white/70 mb-8 text-lg">这不是一次普通的休假，而是一次对自我的重新发现。这份攻略已为你扫清执行层面的所有障碍。</p>
+        <div class="reveal d3 flex flex-col md:flex-row gap-5 justify-center mb-14">
+          <button onclick="goTo(0)" class="px-10 py-4 rounded-full font-bold text-white transition" style="background:var(--gold)">回到封面</button>
+          <a href="mailto:hello@example.com" class="border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition">联系向导</a>
+        </div>
+        <div class="reveal d4 flex flex-col items-center gap-1.5 text-white/80 text-xs">
+          <span class="tracking-wide">阿尔卑斯巅峰之旅深度攻略</span>
+          <span>© 2026 Alps Peak 15</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const deck = document.getElementById('deck');
+    const panels = Array.from(document.querySelectorAll('.panel'));
+    const total = panels.length;
+    const dotsWrap = document.getElementById('dots');
+    const counter = document.getElementById('counter');
+    const progress = document.getElementById('progress');
+    let current = 0;
+    let animating = false;
+
+    panels.forEach((p, i) => {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' on' : '');
+      d.innerHTML = '<span class="lbl">' + (p.dataset.label || ('0' + (i+1))) + '</span>';
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    });
+    const dots = Array.from(document.querySelectorAll('.dot'));
+
+    function pad(n){ return (n+1).toString().padStart(2,'0'); }
+
+    function render() {
+      deck.style.transform = 'translate3d(0, -' + (current * 100) + 'vh, 0)';
+      document.body.classList.toggle('is-cover', current === 0);
+      document.body.classList.toggle('light-panel', panels[current].dataset.theme === 'light');
+      panels.forEach((p, i) => {
+        p.classList.toggle('active', i === current);
+        p.classList.toggle('bg-loaded', Math.abs(i - current) <= 1);
+        p.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      });
+      dots.forEach((d, i) => d.classList.toggle('on', i === current));
+      counter.innerHTML = pad(current) + ' <span>/ ' + pad(total-1) + '</span>';
+      progress.style.width = ((current)/(total-1)*100) + '%';
+    }
+
+    function goTo(i) {
+      if (i < 0 || i > total - 1 || i === current || animating) return;
+      animating = true;
+      current = i;
+      render();
+      setTimeout(() => { animating = false; }, 1050);
+    }
+    function next(){ goTo(current + 1); }
+    function prev(){ goTo(current - 1); }
+
+    // Wheel — ignore when the gesture targets a horizontal scroller mid-scroll
+    let wheelLock = false;
+    window.addEventListener('wheel', (e) => {
+      if (wheelLock || animating) return;
+      if (Math.abs(e.deltaY) < 12) return;
+      wheelLock = true;
+      if (e.deltaY > 0) next(); else prev();
+      setTimeout(() => { wheelLock = false; }, 900);
+    }, { passive: true });
+
+    window.addEventListener('keydown', (e) => {
+      if (['ArrowDown','PageDown',' '].includes(e.key)) { e.preventDefault(); next(); }
+      if (['ArrowUp','PageUp'].includes(e.key)) { e.preventDefault(); prev(); }
+      if (e.key === 'Home') goTo(0);
+      if (e.key === 'End') goTo(total-1);
+    });
+
+    // Touch — let horizontal scrollers consume horizontal swipes
+    let touchStartY = 0, touchStartX = 0;
+    window.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY; touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    window.addEventListener('touchend', (e) => {
+      const dy = touchStartY - e.changedTouches[0].clientY;
+      const dx = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(dy) > 50 && Math.abs(dy) > Math.abs(dx)) { if (dy > 0) next(); else prev(); }
+    }, { passive: true });
+
+    document.body.classList.add('js-ready');
+    render();
+
+    const iconFontLink = document.querySelector('[data-icons-font]');
+    function enableMaterialIcons() {
+      const canCheck = document.fonts && typeof document.fonts.check === 'function';
+      if (!canCheck || document.fonts.check('24px "Material Symbols Outlined"', 'flight')) {
+        document.body.classList.add('icons-ready');
+      }
+    }
+    if (iconFontLink) iconFontLink.addEventListener('load', () => requestAnimationFrame(enableMaterialIcons), { once: true });
+    window.addEventListener('load', () => {
+      enableMaterialIcons();
+      setTimeout(enableMaterialIcons, 800);
+    }, { once: true });
+  </script>
+</body>
+</html>

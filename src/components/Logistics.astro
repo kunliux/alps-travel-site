@@ -1,0 +1,32 @@
+---
+import type { LogisticsCard } from "@data/trip";
+
+interface Props {
+  cards: LogisticsCard[];
+}
+
+const { cards } = Astro.props;
+---
+
+<section class="band forest" id="route" aria-labelledby="route-title">
+  <div class="page-shell">
+    <div class="section-heading invert">
+      <p class="eyebrow">Getting There & Around</p>
+      <h2 id="route-title">大交通规划</h2>
+      <p>先用自驾处理法国到意大利的山地自由度，再把瑞士段切换到火车和通票，减少停车与限行的不确定性。</p>
+    </div>
+    <div class="logistics-grid">
+      {
+        cards.map((card) => (
+          <article class="info-card dark-card">
+            <p class="card-label">{card.label}</p>
+            <h3>{card.title}</h3>
+            <ul>
+              {card.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
