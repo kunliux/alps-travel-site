@@ -24,10 +24,13 @@ npm run preview
 
 构建产物输出到 `dist/`。Cloudflare Pages 也使用这个目录。
 
-最近一次本地校验：
+最近一次校验：
 
 - `npm run build`：通过，Astro check 0 errors / 0 warnings
-- Lighthouse：发布到 Cloudflare Pages 后复测
+- Cloudflare Pages：`https://alps-peak-15.pages.dev` 返回 200
+- Lighthouse 桌面端最近成功采样：Performance 82 / Accessibility 93 / Best Practices 100 / SEO 100
+
+为保持确认过的视觉效果，当前保留完整字体与首屏大图；后续如继续追求 90+ Performance，优先做字体子集化与图标字体裁剪。
 
 ## 目录结构
 
